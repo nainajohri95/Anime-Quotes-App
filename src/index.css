@@ -1,13 +1,328 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #0c1117;
+  color: #cbd6e2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Climate Crisis', cursive;
+}
+
+.title-box h1 {
+  background: -webkit-linear-gradient(#d1810e, #edcf33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-box p {
+  font-family: 'Shantell Sans', cursive;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.card {
+  background: #ffffff;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #000;
+}
+
+.author-box {
+  display: flex;
+  gap: 5px;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+}
+
+.author-img img {
+  width: 35px;
+  border-radius: 50%;
+}
+
+.author-creadit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.author-creadit h2 {
+  font-size: 0.8rem;
+}
+
+.author-creadit p {
+  font-size: 0.7rem;
+  color: #6b6b6bd7;
+}
+
+.card-text {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.creadit-box {
+  font-size: 0.6rem;
+  color: #7c7c7c;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.generate-btn {
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Climate Crisis', cursive;
+  font-weight: 100;
+  background: linear-gradient(to top, #11998e, #38ef7d);
+  transition: 0.2s;
+}
+
+.generate-btn:hover {
+  background: #0c1117;
+  border: 1px solid #38ef7d;
+  transition: 0.1s ease-out;
+}
+
+.download-btn {
+  padding: 8px 15px;
+  font-size: 15.9px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Climate Crisis', cursive;
+  font-weight: 100;
+  background: linear-gradient(to top, #7f00ff, #e100ff);
+  transition: 0.2s;
+}
+
+.download-btn:hover {
+  background: #0c1117;
+  border: 1px solid #e100ff;
+  transition: 0.1s ease-out;
+}
+
+.create-btn {
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Climate Crisis', cursive;
+  font-weight: 100;
+  background: linear-gradient(to bottom, #00b3ff, #473dfb);
+  transition: 0.2s;
+}
+
+.create-btn:hover {
+  background: #0c1117;
+  border: 1px solid #00b3ff;
+  transition: 0.1s ease-out;
+}
+
+.about {
+  display: flex;
+  padding-inline: 15px;
+  margin-top: 20px;
+  justify-content: start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.about h4 {
+  font-size: 1.3rem;
+  font-family: 'Climate Crisis', cursive;
+  font-weight: 100;
+  background: -webkit-linear-gradient(#00b3ff, #473dfb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about p {
+  font-size: 12px;
+  font-family: 'Shantell Sans', cursive;
+}
+
+.links {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.links a {
+  color: #ffffff;
+  font-family: 'Shantell Sans', cursive;
+  font-size: 0.7rem;
+}
+
+.anime-list {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Shantell Sans', cursive;
+  font-size: 12px;
+  margin-inline: 20px;
+}
+
+.anime-list ul {
+  list-style: none;
+}
+
+.anime-list li::before {
+  content: "👉";
+  display: inline-block;
+  padding-inline-end: 0.75rem;
+  transform: 200ms;
+}
+
+.anime-list li:hover::before {
+  transform: translateX(0.25rem);
+}
+
+.creadit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #141414;
+  height: auto;
+  width: auto;
+  padding: 5px 10px 0 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  gap: 10px;
+  border-radius: 9px;
+}
+
+.img-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-icon img{
+  width: 50px;
+}
+
+.share{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.footer-credit {
+  position: fixed;
+  left: 35px;
+  bottom: 0;
+  margin-inline: 15px;
+  overflow: hidden;
+  font-size: 10px;
+  margin-bottom: 10px;
+  font-family: 'Shantell Sans', cursive;
+}
+
+.crete{
+  height: 240px;
+  max-height: 300px;
+  width: 400px;
+}
+
+.box-up-down{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (max-width:700px) {
+
+  .header {
+    height: 100px;
+  }
+
+  .title-box h1 {
+    font-size: 1.7rem;
+    font-weight: 100;
+  }
+
+  .title-box p {
+    font-size: 0.7rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .about h4 {
+    font-size: 1.2rem;
+  }
+
+  .button-box{
+    flex-wrap: wrap;
+  }
+
+  .crete{
+    height: 200px;
+    max-height: 250px;
+  }
+
 }
